@@ -1,0 +1,16 @@
+#ifndef CATEGORIES_H
+#define CATEGORIES_H
+
+enum MyCategories : uint32_t {
+    CAR_L0 = 0x00000001,
+    CAR_L1 = 0x00000002,
+    WALL_L0 = 0x00000004,
+    WALL_L1 = 0x00000008,
+    NPC_L0 = 0x00010000,
+    NPC_L1 = 0x00200000,
+    SENSOR = 0x00000010,
+    BOTH_WALLS = WALL_L0 | WALL_L1,
+    BOTH_CARS = CAR_L0 | CAR_L1 | NPC_L0 | NPC_L1
+};
+
+#endif

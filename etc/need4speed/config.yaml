@@ -1,0 +1,132 @@
+# Todos los valores que se refieran a tiempo (time) estan configurados en SEGUNDOS
+
+game:
+  race_total_time: 610
+  race_countdown_time: 10
+  results_screen_seconds: 10
+  upgrades_screen_seconds: 10
+
+  physics:
+    timestep: 0.016666  # 1/60
+    substeps: 4
+    hit_event_threshold: 6.0
+
+
+# Se recomienda NO modificar ni base_length ni base_width ya que desconfigurarian
+# "lo que se ve" de "lo que sucede". Es agregado aqui, solamente por si en un futuro
+# se quieren agregar mas autos, poder encapsular toda la logica necesaria aca.
+# Las stats se pueden modificar al gusto del jugador, donde subirlas, representa una
+# mejora en la respectiva estadistica.
+
+cars:
+# Familiar
+  0:
+    base_length: 1.75
+    base_width: 1.25
+    stats:
+      speed: 25
+      engine_force: 45
+      handling: 50
+      weight: 40
+      shield: 10
+# Sedan
+  1:
+    base_length: 2.5
+    base_width: 1.25
+    stats:
+      speed: 30
+      engine_force: 50
+      handling: 80
+      weight: 50
+      shield: 15
+# Deportivo
+  2:
+    base_length: 2.5
+    base_width: 1.25
+    stats:
+      speed: 50
+      engine_force: 70
+      handling: 65
+      weight: 50
+      shield: 20
+# Super Deportivo
+  3:
+    base_length: 2.5
+    base_width: 1.25
+    stats:
+      speed: 70
+      engine_force: 90
+      handling: 70
+      weight: 50
+      shield: 25
+# Pick up
+  4:
+    base_length: 2.4375
+    base_width: 1.5
+    stats:
+      speed: 25
+      engine_force: 40
+      handling: 60
+      weight: 100
+      shield: 80
+# GT
+  5:
+    base_length: 2.5
+    base_width: 1.375
+    stats:
+      speed: 90
+      engine_force: 100
+      handling: 90
+      weight: 40
+      shield: 30
+# Limusina
+  6:
+    base_length: 3.0
+    base_width: 1.25
+    stats:
+      speed: 30
+      engine_force: 60
+      handling: 85
+      weight: 90
+      shield: 60
+
+# Las mejoras pueden ser de 3 niveles. Cada una de ellas tiene una penalizacion en segundos por hacerla
+# si se quiere sumar o restar SEGUNDOS de la misma, hacerlo aca.
+upgrades:
+  penalties:
+    1: 10.0
+    2: 20.0
+    3: 30.0
+
+npcs:
+  max_npcs_moving: 10
+  max_npcs_parking: 10
+  npc_speed: 6.0
+  npc_model: 0
+  min_distance_to_pole: 20.0
+
+car_tuning:
+  # Factores que multiplican la fuerza del motor
+  slow_zone_factor: 0.4
+  reverse_factor: 0.6
+
+  crash:
+    # Daños por choque
+    damage_low: 1.0
+    damage_med: 3.0
+    damage_high: 5.0
+
+  # Mapeo stats -> fisica
+  mapping:
+    min_density: 0.7
+    max_density: 1.5
+    min_max_speed: 90.0
+    max_max_speed: 220.0
+    min_engine_force: 6.0
+    max_engine_force: 40.0
+    min_turn_torque: 8.0
+    max_turn_torque: 20.0
+    min_friction: 0.05
+    max_friction: 0.2
+    min_shield: 0.0
+    max_shield: 0.8
