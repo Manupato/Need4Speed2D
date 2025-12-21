@@ -20,7 +20,7 @@ El proyecto cuenta con su [página web oficial](https://joaquinschapira.github.i
 
 ### 1. Clonar el repositorio
 ```bash
-git clone https://github.com/lucasPagani2003/taller-de-programacion-tp-grupal-2025c2-grupo-2.git
+git clone https://github.com/Manupato/Need4Speed2D.git
 ```
 
 ### 2. Otorgar permisos de ejecución al instalador
